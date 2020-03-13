@@ -16,12 +16,10 @@
         crossorigin="anonymous"></script>
     <script src="animeJs/anime.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
-    <macumba></macumba>
 </head>
 
 <body>
     <style>
-
         p {
             font-family: 'Chakra Petch', sans-serif;
         }
@@ -33,80 +31,91 @@
         span {
             font-family: 'Chakra Petch', sans-serif;
         }
-        body{
+
+        body {
             background-color: rgb(255, 255, 255);
         }
     </style>
-<div>
     <div>
-        <br />
-        <p style="margin-left: 10px; font-size: xx-large;">Junte grana para comprar o seu PC Gamer</p>
-    </div>
+        <div>
+            <br />
+            <p style="margin-left: 10px; font-size: xx-large;">Junte grana para comprar o seu PC Gamer</p>
+        </div>
 
-    <div>
-        <span style="margin-left: 10px; font-size: x-large;">Quantidade Monetária atual : </span>
-        <br>
-        <span id='valorAtual' style="font-size: x-large; margin-left: 10px; font-family: 'Chakra Petch', sans-serif;">80</span>
-        <span style=" font-family: 'Chakra Petch', sans-serif;">R$</span>
-        <br><br>
-    </div>
+        <div>
+            <span style="margin-left: 10px; font-size: x-large;">Quantidade Monetária atual : </span>
+            <br>
+            <span id='valorAtual'
+                style="font-size: x-large; margin-left: 10px; font-family: 'Chakra Petch', sans-serif;">80</span>
+            <span style=" font-family: 'Chakra Petch', sans-serif;">R$</span>
+            <br><br>
+        </div>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Início</a>
-        </li>
-        <li class="nav-item">
-            <span id="qtdBadge" class="badge badge-pill badge-primary" style="float:right;margin-bottom:-10px; display: none;">0</span>
-          <a class="nav-link" id="upgrade-tab" data-toggle="tab" href="#upgradeNavHtml" role="tab" aria-controls="profile" aria-selected="false">Upgrades</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="config-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Config</a>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div>
-                <br>
-                <button style="margin-left: 30px;" id='mainButton' type="button" class="btn btn-outline-primary">Mendigar
-                    para a mãe</button>
-                <span>&nbsp</span>
-                <span style="font-weight: bold;">+</span><span style="font-weight: bold;">1</span><span style="font-weight: bold;">&nbsp&nbspR$</span>
-            </div>
-            <div>
-                <br>
-                <button style="margin-left: 30px;" id="upgradeButton1" type="button" class="btn btn-outline-dark upgradeButton">Comprar
-                    um
-                    mendigo para pedir dinheiro no farol</button>
-                <span style="margin-left: 30px; font-weight: bold; font-family: 'Chakra Petch', sans-serif;">Custo : </span><span
-                    style="font-family: 'Chakra Petch', sans-serif;" id='precoUpgrade'>10</span><span>
-                    R$
-                </span>
-                <span style="font-weight: bold;">&nbsp&nbspQntd Comprada : </span>
-                <span id="qtdCompradaUpgrade1">0</span>
-                <span style="font-weight: bold;">&nbsp&nbspProdução total por segundo :</span>
-                <span id="producaoPorSeg1">0</span>
-            </div>
-            <div>
-                <div id="upgrade2" style="display: none;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                    aria-selected="true">Início</a>
+            </li>
+            <li class="nav-item">
+                <span id="qtdBadge" class="badge badge-pill badge-primary"
+                    style="float:right;margin-bottom:-10px; display: none;">0</span>
+                <a class="nav-link" id="upgrade-tab" data-toggle="tab" href="#upgradeNavHtml" role="tab"
+                    aria-controls="profile" aria-selected="false">Upgrades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="config-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                    aria-selected="false">Config</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div>
                     <br>
-                    <button style="margin-left: 30px;" id="upgradeButton2" type="button"
-                        class="btn btn-outline-warning upgradeButton">Anunciar
-                        crowdfunding para ajudar no gasto</button>
-                    <span style="font-weight: bold; margin-left: 63px; font-family: 'Chakra Petch', sans-serif;">Custo : </span><span
-                        style="font-family: 'Chakra Petch', sans-serif;" id='precoUpgrade2'>300</span>
+                    <button style="margin-left: 30px;" id='mainButton' type="button"
+                        class="btn btn-outline-primary">Mendigar
+                        para a mãe</button>
+                    <span>&nbsp</span>
+                    <span style="font-weight: bold;">+</span><span id="clickValAtual"
+                        style="font-weight: bold;">1</span><span style="font-weight: bold;">&nbsp&nbspR$</span>
+                </div>
+                <div>
+                    <br>
+                    <button style="margin-left: 30px;" id="upgradeButton1" type="button"
+                        class="btn btn-outline-dark upgradeButton">Comprar
+                        um
+                        mendigo para pedir dinheiro no farol</button>
+                    <span style="margin-left: 30px; font-weight: bold; font-family: 'Chakra Petch', sans-serif;">Custo :
+                    </span><span style="font-family: 'Chakra Petch', sans-serif;" id='precoUpgrade'>10</span><span>
+                        R$
+                    </span>
+                    <span style="font-weight: bold;">&nbsp&nbspQntd Comprada : </span>
+                    <span id="qtdCompradaUpgrade1">0</span>
+                    <span style="font-weight: bold;">&nbsp&nbspProdução total por segundo :</span>
+                    <span id="producaoPorSeg1">0</span>
+                </div>
+                <div>
+                    <div id="upgrade2" style="display: none;">
+                        <br>
+                        <button style="margin-left: 30px;" id="upgradeButton2" type="button"
+                            class="btn btn-outline-warning upgradeButton">Anunciar
+                            crowdfunding para ajudar no gasto</button>
+                        <span
+                            style="font-weight: bold; margin-left: 63px; font-family: 'Chakra Petch', sans-serif;">Custo
+                            : </span><span style="font-family: 'Chakra Petch', sans-serif;"
+                            id='precoUpgrade2'>300</span>
                         <span>R$</span>
                         <span style="font-weight: bold;">&nbsp&nbspQntd Comprada : </span>
                         <span id="qtdCompradaUpgrade2">0</span>
                         <span style="font-weight: bold;">&nbsp&nbspProdução total por segundo :</span>
                         <span id="producaoPorSeg2">0</span>
+                    </div>
                 </div>
             </div>
+            <div class="tab-pane fade" id="upgradeNavHtml" role="tabpanel" aria-labelledby="profile-tab">
+                <div id='rootBoost'></div>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
         </div>
-        <div class="tab-pane fade" id="upgradeNavHtml" role="tabpanel" aria-labelledby="profile-tab">
-            <div id='rootBoost'></div>
-        </div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-      </div>
     </div>
     <script>
 
@@ -116,19 +125,20 @@
             var qntUpgradeComprado = 0
             var qntUpgradeComprado2 = 0
             var numAtual = parseFloat($('#valorAtual').text());
-            var custoUpgrade =  $('#precoUpgrade').text();
+            var custoUpgrade = $('#precoUpgrade').text();
             var custoUpgrade2 = $('#precoUpgrade2').text();
             var valIncrementUpgrade = 0.1;
             var valIncrementUpgradeNext = 0;
             var valIncrementUpgradeNext2 = 0;
             var valIncrementUpgrade2 = 1;
-            var valClick = 100;
+            var valClick = 1000;
             var vezesClicado = 99;
+            var valorIncremento = 0;
 
             $('#mainButton').click(function () {
-                
+
                 vezesClicado++
-                
+
                 numAtual = numAtual + valClick
 
                 $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
@@ -141,63 +151,79 @@
 
             $('.upgradeButton').click(function () {
 
+
                 animaBotao(this);
                 verificaUpgradeENotificaListener();
 
                 var idDoBotao = $(this).attr('id');
 
-                if(idDoBotao == 'upgradeButton1'){
+                if (idDoBotao == 'upgradeButton1') {
 
                     qntUpgradeComprado++
 
-                    valIncrementUpgradeNext = valIncrementUpgradeNext + valIncrementUpgrade;
-                    
+                    valIncrementUpgradeNext = valIncrementUpgradeNext + valIncrementUpgrade
+
                     $('#producaoPorSeg1').text(parseFloat(valIncrementUpgradeNext.toFixed(2)))
                     $('#qtdCompradaUpgrade1').text(qntUpgradeComprado);
 
                     numAtual = numAtual - custoUpgrade;
                     custoUpgrade *= 1.15;
 
-                    buyUpgrade(valIncrementUpgrade);
+                    valorIncremento = valorIncremento + valIncrementUpgrade;
+
+                    checkSeLiberaUpgrade(custoUpgrade, numAtual);
 
                     $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
                     $('#precoUpgrade').text(parseFloat(custoUpgrade.toFixed(2)));
 
-                }else if(idDoBotao == 'upgradeButton2'){
+                } else if (idDoBotao == 'upgradeButton2') {
+
+                    valIncrementUpgradeNext2 = valIncrementUpgradeNext2 + valIncrementUpgrade2
+
                     qntUpgradeComprado2++
-
-                    valIncrementUpgradeNext2 = valIncrementUpgradeNext2 + valIncrementUpgrade2;
-
-                    numAtual = numAtual - custoUpgrade2;
-                    custoUpgrade2 *= 1.15;
 
                     $('#producaoPorSeg2').text(parseFloat(valIncrementUpgradeNext2.toFixed(2)))
                     $('#qtdCompradaUpgrade2').text(qntUpgradeComprado2);
 
-                    buyUpgrade(valIncrementUpgrade2);
+                    numAtual = numAtual - custoUpgrade2;
+                    custoUpgrade2 *= 1.15;
+
+                    valorIncremento = valorIncremento + valIncrementUpgrade2;
+
                     checkSeLiberaUpgrade(custoUpgrade2, numAtual);
 
                     $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
                     $('#precoUpgrade2').text(parseFloat(custoUpgrade2.toFixed(2)));
                 }
 
-                
-                if (qntUpgradeComprado >= 1) {                  
+
+                if (qntUpgradeComprado >= 1) {
                     checkSeLiberaUpgrade(custoUpgrade, numAtual);
                 }
 
             })
 
-            function buyUpgrade(valorIncremento) {
-                
-                var intervalo = setInterval(function () {
-                    console.log('valIncrementUpgrade',valorIncremento);
-                    numAtual = numAtual + valorIncremento
-                    console.log('numerOAJHIUTA',numAtual);
-                    $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
+            var intervalo = setInterval(function () {
+                updateValor();
+            }, 1000)
 
-                    checkSeLiberaUpgrade(custoUpgrade, numAtual);
-                }, 1000)
+
+
+            function updateValor() {
+
+                numAtual = numAtual + valIncrementUpgradeNext
+
+                console.log('valIncrementUpgradeNext',valIncrementUpgradeNext);
+                console.log('valIncrementUpgradeNext2',valIncrementUpgradeNext2);
+
+                numAtual = numAtual + valIncrementUpgradeNext2
+
+
+                console.log('chamou valIncremento:', numAtual);
+
+                $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
+
+                checkSeLiberaUpgrade(custoUpgrade, numAtual);
 
             }
 
@@ -215,91 +241,152 @@
                 if (numAtual >= 100) {
                     $('#upgrade2').show(animaShowButton('#upgradeButton2'));
 
-                    $('#upgradeButton2').prop('disabled',true);
+                    $('#upgradeButton2').prop('disabled', true);
                 }
 
-                if(numAtual >= custoUpgrade2){
-                        $('#upgradeButton2').prop('disabled',false);
-                    }else{
-                        $('#upgradeButton2').prop('disabled',true);
-                    }
+                if (numAtual >= custoUpgrade2) {
+                    $('#upgradeButton2').prop('disabled', false);
+                } else {
+                    $('#upgradeButton2').prop('disabled', true);
+                }
 
             }
 
-            var controle = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-            function verificaUpgradeENotificaListener(){
+            //AREA DE UPGRADES - E VARIAVEL DE CONTROLE - INICIO
+            var controle = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            function verificaUpgradeENotificaListener() {
+
                 var objetoUpgradeList = {};
+                var clickValAtual = parseFloat($('#clickValAtual').text());
+                console.log('clickValAtual', clickValAtual);
 
-                if(vezesClicado == 100){
+                if (vezesClicado == 100) {
 
-                        objetoUpgradeList = {
-                            qntdUpgrade:1,
-                            tipoUpgrade:'clique',
-                            custo:500,
-                            txtUpgrade: 'Começar a implorar para a Mãe',
-                            txtButton: 'R$ por clique +1 &nbsp&nbspCusto: 500 R$'
-                        }
-
-                        vezesClicado++
-                        montaListaUpgrade(objetoUpgradeList);
+                    objetoUpgradeList = {
+                        qntdUpgrade: 1,
+                        tipoUpgrade: 'clique',
+                        custo: 500,
+                        txtUpgrade: 'Começar a implorar para a Mãe',
+                        txtButton: 'R$ por clique +1 &nbsp&nbspCusto: 500 R$'
                     }
 
-                if(vezesClicado == 110){
+                    vezesClicado++
+                    montaListaUpgrade(objetoUpgradeList);
+                }
+                if (vezesClicado == 110) {
 
                     objetoUpgradeList = {
-                            qntdUpgrade:3,
-                            tipoUpgrade:'clique',
-                            custo:4000,
-                            txtUpgrade: 'Pedir dinheiro pra vó',
-                            txtButton: 'R$ por clique +3 &nbsp&nbspCusto: 4000 R$'
-                        }
-                        
-                        vezesClicado++
-                        montaListaUpgrade(objetoUpgradeList);
+                        qntdUpgrade: 3,
+                        tipoUpgrade: 'clique',
+                        custo: 4000,
+                        txtUpgrade: 'Pedir dinheiro para a avó',
+                        txtButton: 'R$ por clique +3 &nbsp&nbspCusto: 4000 R$'
+                    }
+                    vezesClicado++
+                    montaListaUpgrade(objetoUpgradeList);
                 }
-                if(qntUpgradeComprado == 15 && controle[0] == 0){
+                if (vezesClicado == 120) {
+
+objetoUpgradeList = {
+    qntdUpgrade: 10,
+    tipoUpgrade: 'clique',
+    custo: 10000,
+    txtUpgrade: 'Pedir dinheiro para a tia rica',
+    txtButton: 'R$ por clique +10 &nbsp&nbspCusto: 10000 R$'
+}
+vezesClicado++
+montaListaUpgrade(objetoUpgradeList);
+}              
+                if (vezesClicado == 130) {
+
+objetoUpgradeList = {
+    qntdUpgrade: 50,
+    tipoUpgrade: 'clique',
+    custo: 50000,
+    txtUpgrade: 'Pedir dinheiro para o primo advogado',
+    txtButton: 'R$ por clique +50 &nbsp&nbspCusto: 50000 R$'
+}
+vezesClicado++
+montaListaUpgrade(objetoUpgradeList);
+} 
+
+                if (qntUpgradeComprado == 15 && controle[0] == 0) {
+
                     objetoUpgradeList = {
-                            qntdUpgrade:2,
-                            tipoUpgrade:'mendigo',
-                            custo:1000,
-                            txtUpgrade: 'Comprar balas para os mendigos vender',
-                            txtButton: 'Produção do mendigo x2 &nbsp&nbspCusto: 1000 R$'
-                        }
-                        
-                        montaListaUpgrade(objetoUpgradeList);
-                        controle[0] = 1
-                        console.log(controle);
+                        qntdUpgrade: 2,
+                        tipoUpgrade: 'mendigo',
+                        custo: 1000,
+                        txtUpgrade: 'Comprar balas para os mendigos vender',
+                        txtButton: 'Produção do mendigo x2 &nbsp&nbspCusto: 1000 R$'
+                    }
+
+                    montaListaUpgrade(objetoUpgradeList);
+                    controle[0] = 1
+                }
+                if (qntUpgradeComprado == 30 && controle[1] == 0){
+
+                    objetoUpgradeList = {
+                        qntdUpgrade: 2,
+                        tipoUpgrade: 'mendigo',
+                        custo: 5000,
+                        txtUpgrade: 'Comprar crianças no mercado negro para ajudar os mendigos',
+                        txtButton: 'Produção do mendigo x2 &nbsp&nbspCusto: 5000 R$'
+                    }
+
+                    montaListaUpgrade(objetoUpgradeList);
+                    controle[1] = 1
+                }
+
+                if(qntUpgradeComprado2 == 10 && controle[10] == 0){
+
+                    objetoUpgradeList = {
+                        qntdUpgrade: 2,
+                        tipoUpgrade: 'crowdfunding',
+                        custo: 10000,
+                        txtUpgrade: 'Panfletar nas ruas em prol de seu CrowdFunding',
+                        txtButton: 'Produção do CrowdFunding x2 &nbsp&nbspCusto: 10000 R$'
+                    }
+
+                    montaListaUpgrade(objetoUpgradeList);
+                    controle[10] = 1
                 }
 
                 objetoUpgradeList = {};
             }
 
-            function montaListaUpgrade(objetoUpgrade){
+            function montaListaUpgrade(objetoUpgrade) {
 
-                $('#rootBoost').append(`<div style="margin-top: 25px; margin-left: 30px; font-family: 'Chakra Petch', sans-serif; width: 55%; font-size: large;">${objetoUpgrade.txtUpgrade}<button qntdUpgrade="${objetoUpgrade.qntdUpgrade}" tipoUpgrade="${objetoUpgrade.tipoUpgrade}" custo="${objetoUpgrade.custo}" style="margin-left: 30px; float: right;" type="button"
+                var teste = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+
+                $('#rootBoost').append(`<div style="margin-top: 25px; margin-left: 30px; font-family: 'Chakra Petch', sans-serif; width: 100%; font-size: large;">${objetoUpgrade.txtUpgrade}<button qntdUpgrade="${objetoUpgrade.qntdUpgrade}" tipoUpgrade="${objetoUpgrade.tipoUpgrade}" custo="${objetoUpgrade.custo}" style="background-color: ${teste};position: relative;margin-right: 400px; float: right;" type="button"
                         class="btn btn-outline-dark boostButton">${objetoUpgrade.txtButton}</button></div>`)
-
                 checkQntdUpgrades();
             }
 
-            function checkQntdUpgrades(){
+            function checkQntdUpgrades() {
                 var qtdDivs = $('#rootBoost > div').length
-                if(qtdDivs > 0){
-                $('#qtdBadge').show()
-                $('#qtdBadge').text(qtdDivs);
-                }else{
+                if (qtdDivs > 0) {
+                    $('#qtdBadge').show()
+                    $('#qtdBadge').text(qtdDivs);
+                } else {
                     $('#qtdBadge').hide();
                 }
             }
 
+            //AREA DE UPGRADES - E VARIAVEL DE CONTROLE - FIM
+
             function animaBotao(qualBotao) {
 
+                console.log('qualBotao', qualBotao);
+
                 var idFromThis = $(qualBotao).attr('id');
+                console.log('idFromThis', idFromThis);
 
                 anime({
-                    targets: '#'+idFromThis,
+                    targets: '#' + idFromThis,
                     rotate: 2,
+                    rotateX: 0,
                     direction: 'alternate',
                     duration: 30,
                     easing: 'easeInOutSine'
@@ -308,46 +395,69 @@
 
             function animaShowButton(qualMostrou) {
 
-                anime({
-                    targets: qualMostrou,
-                    rotateX: 360,
-                    duration: 8000,
-                    //easing: 'easeInOutSine'
-                })
+                /*anime({
+                     targets: qualMostrou,
+                     rotateX: 360,
+                     duration: 8000,
+                     //easing: 'easeInOutSine'
+                 })*/
 
             }
-            
-            $(document).on('click','.boostButton', function(){
-                
+
+            $(document).on('click', '.boostButton', function () {
+
                 var valorUpgradeClicado = $(this).attr('custo');
                 var qualUpgrade = $(this).attr('tipoUpgrade');
                 var quantoDeUpgrade = parseFloat($(this).attr('qntdUpgrade'))
-                var handlerVal = 0; 
+                var handlerVal = 0;
 
-                    console.log(valorUpgradeClicado)
+                console.log(valorUpgradeClicado)
 
-                    if(qualUpgrade == 'clique' && numAtual > valorUpgradeClicado){
-                        $(this).parent().remove();
-                        numAtual = numAtual - valorUpgradeClicado
-                        valClick = valClick + quantoDeUpgrade
+                //BOOST DE CLICK - INICIO
+                if (qualUpgrade == 'clique' && numAtual > valorUpgradeClicado) {
 
-                        $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
-                        checkQntdUpgrades()
-                    }
+                    $(this).parent().remove();
 
-                    if(qualUpgrade == 'mendigo' && numAtual > valorUpgradeClicado){
-                        $(this).parent().remove();
-                        numAtual = numAtual - valorUpgradeClicado
+                    numAtual = numAtual - valorUpgradeClicado
+                    valClick = valClick + quantoDeUpgrade
 
-                        valIncrementUpgradeNext *= quantoDeUpgrade
-                        valIncrementUpgrade *= quantoDeUpgrade
-                        
-                        console.log('valIncrementUpgradeDentroDoUpgrado',valIncrementUpgrade)
-                        $('#producaoPorSeg1').text(parseFloat(valIncrementUpgradeNext.toFixed(2)))
-                        $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
-                        checkQntdUpgrades()
-                    }
-                
+                    $('#clickValAtual').text(valClick);
+                    $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
+                    checkQntdUpgrades()
+                }
+                //BOOST DE CLICK - FIM
+
+                //BOOST MENDIGO - INICIO
+                if (qualUpgrade == 'mendigo' && numAtual > valorUpgradeClicado) {
+                    $(this).parent().remove();
+                    numAtual = numAtual - valorUpgradeClicado
+
+                    valIncrementUpgradeNext *= quantoDeUpgrade
+                    valIncrementUpgrade *= quantoDeUpgrade
+
+                    console.log('valIncrementUpgradeDentroDoUpgrado', valIncrementUpgrade)
+                    $('#producaoPorSeg1').text(parseFloat(valIncrementUpgradeNext.toFixed(2)))
+                    $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
+                    checkQntdUpgrades()
+                }
+                //BOOST MENDIGO - FIM
+
+                //BOOST CROWDFUNDING - INICIO
+                if (qualUpgrade == 'crowdfunding' && numAtual > valorUpgradeClicado) {
+                    $(this).parent().remove();
+
+                    numAtual = numAtual - valorUpgradeClicado
+
+                    valIncrementUpgradeNext2 *= quantoDeUpgrade
+                    valIncrementUpgrade2 *= quantoDeUpgrade
+
+                    console.log('valIncrementUpgradeDentroDoUpgrado', valIncrementUpgrade2)
+                    $('#producaoPorSeg2').text(parseFloat(valIncrementUpgradeNext2.toFixed(2)))
+                    $('#valorAtual').text(parseFloat(numAtual.toFixed(2)));
+                    checkQntdUpgrades()
+                }
+                //BOOST CROWDFUNDING - FIM
+
             });
 
         })
